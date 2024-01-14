@@ -10,6 +10,7 @@ public class App11 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://store.steampowered.com/");
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(new By.ByXPath("//a[starts-with(@class, 'tab')]//span[contains(., 'News')]"))).click();
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(new By.ByXPath("//div[starts-with(@class, 'eventcalendar_FilterSettings')]//div[contains(., 'Options and Filters')]"))).click();
         Thread.sleep(4000);
         driver.quit();
     }
